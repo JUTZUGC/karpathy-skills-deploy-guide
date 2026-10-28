@@ -1,0 +1,108 @@
+{
+  "owner": "JUTZUGC",
+  "code": "JUTZUGC",
+  "project": {
+    "key": "andrej-karpathy-skills",
+    "nameCn": "Karpathy Skills",
+    "repoName": "karpathy-skills-deploy-guide",
+    "oneLiner": "225.6k stars，MIT，把 Karpathy 总结的四条编码原则写进 CLAUDE.md，约束 AI 的坏习惯",
+    "officialRepo": "https://github.com/multica-ai/andrej-karpathy-skills",
+    "officialDocs": "https://github.com/multica-ai/andrej-karpathy-skills#install",
+    "stars": "225.6k",
+    "license": "MIT",
+    "highlights": [
+      "225.6k stars：单文件项目也能冲到 20 万",
+      "四条原则：Think Before Coding / Simplicity First / Surgical Changes / Goal-Driven Execution",
+      "直接对应病灶：乱做假设、过度抽象、顺手改无关代码",
+      "零依赖：一个 Markdown 文件，放进项目就生效",
+      "可合并：追加到已有 CLAUDE.md，不覆盖你的项目规则",
+      "MIT：可自由改"
+    ],
+    "mcpSupport": "本项目不是 MCP server，只是一个规则文件；本仓库只负责安装，不注册 MCP。",
+    "webuiUrl": "",
+    "adapterPorts": "",
+    "collectedAt": "2026-10-27",
+    "verification": [
+      [
+        "仓库元数据核对：225,587 stars、22,533 forks、2026-01-27 建仓",
+        "已核对 2026-10-27"
+      ],
+      [
+        "README 确认许可证为 MIT（API 的 license 字段为空）",
+        "已核对 2026-10-27"
+      ],
+      [
+        "GitHub Trending 周榜 +4039",
+        "已核对 2026-10-27"
+      ],
+      [
+        "README 确认两种安装方式：插件市场与 CLAUDE.md 文件",
+        "已核对 2026-10-27"
+      ],
+      [
+        "未实测规则在不同模型上的实际约束效果",
+        "说明 2026-10-27"
+      ]
+    ],
+    "deploy": {
+      "type": "script",
+      "steps": [
+        "git clone --depth=1 https://github.com/multica-ai/andrej-karpathy-skills.git",
+        "cp andrej-karpathy-skills/CLAUDE.md ./CLAUDE.md",
+        "wc -l CLAUDE.md",
+        "echo \"安装完成：CLAUDE.md 已放到当前项目根目录\""
+      ],
+      "stepsPs": [
+        "git clone --depth=1 https://github.com/multica-ai/andrej-karpathy-skills.git",
+        "Copy-Item \"andrej-karpathy-skills\\CLAUDE.md\" \".\\CLAUDE.md\" -Force",
+        "(Get-Content .\\CLAUDE.md).Count",
+        "Write-Host '安装完成：CLAUDE.md 已放到当前项目根目录'"
+      ],
+      "source": "https://github.com/multica-ai/andrej-karpathy-skills#install"
+    },
+    "pitfalls": [
+      "放错位置：必须在项目根目录，子目录不会被自动读取",
+      "覆盖了原有规则：用追加而不是 `cp` 覆盖",
+      "感觉没生效：确认客户端版本支持 CLAUDE.md，重启会话",
+      "Cursor 里无效：把 `.cursor/rules/karpathy-guidelines.mdc` 一起复制过去",
+      "模型完全不理：先换更强的模型，再考虑把关键条款写进系统提示",
+      "文件太大影响上下文：只保留你真正需要的原则，删掉示例"
+    ]
+  },
+  "gate": {
+    "allow": [
+      "dumate"
+    ],
+    "label": "百度搭子",
+    "url": "https://www.dumate.cn/",
+    "guideUrl": "https://github.com/JUTZUGC/karpathy-skills-deploy-guide",
+    "howToFix": [
+      "1. 打开 https://www.dumate.cn/ ，下载并安装「百度搭子」电脑端（Windows / macOS）",
+      "2. 用账号登录",
+      "3. 在对话窗口发送：你好，帮我从 github 部署 JUTZUGC/karpathy-skills-deploy-guide 到我的电脑上",
+      "4. 部署完成后，在同一对话窗口里继续使用"
+    ],
+    "hint": "请改用「百度搭子」部署后再使用；本工具没有网页版入口。",
+    "onError": "allow"
+  },
+  "keywords": [
+    "Karpathy Skills 安装",
+    "CLAUDE.md 规则",
+    "AI 编程 规范",
+    "Claude Code 提示词",
+    "AI 少改无关代码",
+    "Karpathy 编码原则",
+    "Cursor rules 配置",
+    "AI 过度设计 解决",
+    "CLAUDE.md 模板",
+    "Agent 行为约束"
+  ],
+  "topics": [
+    "claude-code",
+    "ai-agents",
+    "prompt-engineering",
+    "cursor",
+    "developer-tools",
+    "claude-md"
+  ]
+}

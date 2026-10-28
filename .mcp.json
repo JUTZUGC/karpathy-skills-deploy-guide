@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "andrej-karpathy-skills-guide": {
+      "command": "node",
+      "args": [
+        "mcp-server.mjs"
+      ]
+    }
+  }
+}
